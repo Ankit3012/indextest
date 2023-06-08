@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Oom</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div class="container">
+  <h4>Basic Table</h4>
+             
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Kaam</th>
+        <th>Pass***</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vinod</td>
+        <td><input type="text" class="form-control" id="kvinod" value="0"></td>
+        <td><input type="text" class="form-control" id="pvinod" value="0"></td>
+      </tr>
+      <tr>
+        <td>Himanshu</td>
+        <td><input type="text" class="form-control" id="khim" value="0"></td>
+        <td><input type="text" class="form-control" id="phim" value="0"></td>
+      </tr>
+      <tr>
+        <td>Banty</td>
+        <td><input type="text" class="form-control" id="kban" value="0"></td>
+        <td><input type="text" class="form-control" id="pban" value="0"></td>
+      </tr>
+      <tr>
+        <td>10%</td>
+        <td><input type="text" class="form-control" id="kusr" value="0"></td>
+        <td><input type="text" class="form-control" id="pusr" value="0"></td>
+      </tr>
+      <tr>
+        <td>Khan 20%</td>
+        <td><input type="text" class="form-control" id="kk" value="0"></td>
+        <td><input type="text" class="form-control" id="pk" value="0"></td>
+      </tr>
+      <tr>
+        <td>Verma 20%</td>
+        <td><input type="text" class="form-control" id="kv" value="0"></td>
+        <td><input type="text" class="form-control" id="pv" value="0"></td>
+      </tr>
+      <tr>
+        <td>Zuber 20%</td>
+        <td><input type="text" class="form-control" id="kz" value="0"></td>
+        <td><input type="text" class="form-control" id="pz" value="0"></td>
+      </tr>
+      <tr>
+        <td>Sk 30%</td>
+        <td><input type="text" class="form-control" id="ks" value="0"></td>
+        <td><input type="text" class="form-control" id="ps" value="0"></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-warning mb-2" onclick="start()">Start</button>
+</div>
+<div class="container" id="resultbox" style="display: none;">
+  <h4>Tulsi Result Table</h4>             
+  <table class="table" id="table1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Result</th>
+        <th>Comm.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10%</td>
+        <td id="10re"></td>
+        <td id="10com"></td>        
+      </tr>
+      <tr>
+        <td>Khan</td>
+        <td id="kre"></td>    
+        <td id="kcom"></td>    
+      </tr>
+      <tr>
+        <td>Verma</td>
+        <td id="vre"></td>    
+        <td id="vcom"></td>    
+      </tr>
+      <tr>
+        <td>Zuber</td>
+        <td id="zre"></td>  
+        <td id="zcom"></td>      
+      </tr>
+      <tr>
+        <td>SK</td>
+        <td id="sre"></td>  
+        <td id="scom"></td>      
+      </tr>
+      <th>Total</th>
+      <th id="tulsikaam"></th>
+      <th id="tulsicomm"></th>
+    </tbody>
+  </table>
+</div>
+
+<!-- vinod and all -->
+<div class="container" id="resultbox1" style="display: none;">
+  <h4>ALL Result Table</h4>             
+  <table class="table" id="table2">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Result</th>
+        <th>Comm.</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr>
+        <td>Vinod</td>
+        <td id="vire"></td>  
+        <td id="vicom"></td>      
+      </tr>
+      <tr>
+        <td>Himanshu</td>
+        <td id="hire"></td>  
+        <td id="hicom"></td>      
+      </tr>
+      <tr>
+        <td>Banty</td>
+        <td id="banre"></td>  
+        <td id="bancom"></td>      
+      </tr>
+      <th>Total</th>
+      <th id="otherkaam"></th>
+      <th id="othercomm"></th>
+    </tbody>
+  </table>
+</div>
+<div class="container" id="resultbox3" style="display: none;">
+  <h4>Manish</h4>             
+  <table class="table" id="table3">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Net Res.</th>
+        <th>Comm.</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr>
+        <td>Vinod</td>
+        <td id="mvire"></td>  
+        <td id="mvicom"></td>      
+      </tr>
+      <tr>
+        <td>Himanshu</td>
+        <td id="mhire"></td>  
+        <td id="mhicom"></td>      
+      </tr>
+      <tr>
+        <td>Banty</td>
+        <td id="mbanre"></td>  
+        <td id="mbancom"></td>      
+      </tr>
+      <tr>
+        <td>10%</td>
+        <td id="m10re"></td>
+        <td id="m10com"></td>        
+      </tr>
+      <tr>
+        <td>Khan</td>
+        <td id="mkre"></td>    
+        <td id="mkcom"></td>    
+      </tr>
+      <tr>
+        <td>Verma</td>
+        <td id="mvre"></td>    
+        <td id="mvcom"></td>    
+      </tr>
+      <tr>
+        <td>Zuber</td>
+        <td id="mzre"></td>  
+        <td id="mzcom"></td>      
+      </tr>
+      <tr>
+        <td>SK</td>
+        <td id="msre"></td>  
+        <td id="mscom"></td>      
+      </tr>
+      <th>Total</th>
+      <th id="manishkaam"></th>
+      <th id="manishcomm"></th>
+    </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+  function start(){
+    document.getElementById('resultbox').style.display='block';
+  var kusr=document.getElementById('kusr').value;
+  var pusr=document.getElementById('pusr').value;
+  var kk=document.getElementById('kk').value;
+  var pk=document.getElementById('pk').value;
+  var kv=document.getElementById('kv').value;
+  var pv=document.getElementById('pv').value;
+  var kz=document.getElementById('kz').value;
+  var pz=document.getElementById('pz').value;
+  var ks=document.getElementById('ks').value;
+  var ps=document.getElementById('ps').value;
+
+  var ften=((parseFloat(kusr)-(parseFloat(kusr)*.11))-parseFloat(pusr)).toFixed(2);
+  var fften=(parseFloat(ften)-(parseFloat(ften*.10))).toFixed(2);
+  document.getElementById('10re').innerHTML=fften;
+  document.getElementById('10com').innerHTML=(((parseFloat(kusr)*.01))-(parseFloat(kusr)*.01)*.10).toFixed(2);
+
+  var fkk=((parseFloat(kk)-(parseFloat(kk)*.11))-parseFloat(pk)).toFixed(2);
+  var fkr=(parseFloat(fkk)-(parseFloat(fkk*.20))).toFixed(2);
+  document.getElementById('kre').innerHTML=fkr;
+  document.getElementById('kcom').innerHTML=(((parseFloat(kk)*.01))-(parseFloat(kk)*.01)*.20).toFixed(2);
+
+  var fvv=((parseFloat(kv)-(parseFloat(kv)*.11))-parseFloat(pv)).toFixed(2);
+  var fvr=(parseFloat(fvv)-(parseFloat(fvv*.20))).toFixed(2);
+  document.getElementById('vre').innerHTML=fvr;
+  // commision
+  document.getElementById('vcom').innerHTML=(((parseFloat(kv)*.01))-(parseFloat(kv)*.01)*.20).toFixed(2);
+
+  var fzz=((parseFloat(kz)-(parseFloat(kz)*.11))-parseFloat(pz)).toFixed(2);
+  var fzr=(parseFloat(fzz)-(parseFloat(fzz*.20))).toFixed(2);
+  document.getElementById('zre').innerHTML=fzr;
+  document.getElementById('zcom').innerHTML=(((parseFloat(kz)*.01))-(parseFloat(kz)*.01)*.20).toFixed(2);
+
+  var fss=((parseFloat(ks)-(parseFloat(ks)*.11))-parseFloat(ps)).toFixed(2);
+  var fsr=(parseFloat(fss)-(parseFloat(fss*.30))).toFixed(2);
+  document.getElementById('sre').innerHTML=fsr;
+  document.getElementById('scom').innerHTML=(((parseFloat(ks)*.01))-(parseFloat(ks)*.01)*.30).toFixed(2);
+// totalsum
+var table = document.getElementById("table1"), sumVal = 0,comm =0;
+            
+            for(var i = 1; i < table.rows.length-1; i++)
+            {
+              console.log(table.rows.length);
+              console.log(i);
+                sumVal = sumVal + parseFloat(table.rows[i].cells[1].innerHTML);
+                comm = comm + parseFloat(table.rows[i].cells[2].innerHTML);
+            }
+
+  document.getElementById('tulsikaam').innerHTML=sumVal.toFixed(2);
+  document.getElementById('tulsicomm').innerHTML=comm.toFixed(2);
+// other
+  
+  document.getElementById('resultbox1').style.display='block';
+  // var vire=document.getElementById('vire').value;
+  // var vicom=document.getElementById('vicom').value;
+  var kvinod=document.getElementById('kvinod').value;
+  var pvinod=document.getElementById('pvinod').value;
+  var fvi=((parseFloat(kvinod)-(parseFloat(kvinod)*.10)-parseFloat(pvinod))).toFixed(2);
+  document.getElementById('vire').innerHTML=fvi;
+  document.getElementById('vicom').innerHTML=(((parseFloat(kvinod)*.02))).toFixed(2);
+
+  var khim=document.getElementById('khim').value;
+  var phim=document.getElementById('phim').value;
+  var fhim=((parseFloat(khim)-(parseFloat(khim)*.10)-parseFloat(phim))).toFixed(2);
+  var ffhim=(fhim)-(parseFloat(fhim*.30)).toFixed(2);
+  document.getElementById('hire').innerHTML=ffhim;
+  document.getElementById('hicom').innerHTML=(((parseFloat(khim)*.02)-(parseFloat(khim)*.02)*.3)).toFixed(2);
+
+  var kban=document.getElementById('kban').value;
+  var pban=document.getElementById('pban').value;
+  var fban=((parseFloat(kban)-(parseFloat(kban)*.11))-parseFloat(pban)).toFixed(2);
+  var fpban=(parseFloat(kban)*.02)
+  document.getElementById('banre').innerHTML=fban;
+  document.getElementById('bancom').innerHTML=fpban;
+
+  var table = document.getElementById("table2"), sumVal = 0,comm =0;
+            
+            for(var i = 1; i < table.rows.length-1; i++)
+            {
+              console.log(table.rows.length);
+              console.log(i);
+                sumVal = sumVal + parseFloat(table.rows[i].cells[1].innerHTML);
+                comm = comm + parseFloat(table.rows[i].cells[2].innerHTML);
+            }
+
+  document.getElementById('otherkaam').innerHTML=sumVal.toFixed(2);
+  document.getElementById('othercomm').innerHTML=comm.toFixed(2);
+
+  // manish
+  document.getElementById('resultbox3').style.display='block';
+  var kvinod=document.getElementById('kvinod').value;
+  var pvinod=document.getElementById('pvinod').value;
+  var fvi=((parseFloat(kvinod)-(parseFloat(kvinod)*.12))-parseFloat(pvinod)).toFixed(2);
+  document.getElementById('mvire').innerHTML=fvi;
+  document.getElementById('mvicom').innerHTML=(((parseFloat(kvinod)*.02))).toFixed(2);
+
+  var khim=document.getElementById('khim').value;
+  var phim=document.getElementById('phim').value;
+  var fhim=((parseFloat(khim)-(parseFloat(khim)*.12))-parseFloat(phim)).toFixed(2);
+  var ffhim=(fhim)-(parseFloat(fhim*.30)).toFixed(2);
+  document.getElementById('mhire').innerHTML=ffhim;
+  document.getElementById('mhicom').innerHTML=(((parseFloat(khim)*.02)-(parseFloat(khim)*.02)*.3)).toFixed(2);
+
+  var kban=document.getElementById('kban').value;
+  var pban=document.getElementById('pban').value;
+  var fban=((parseFloat(kban)-(parseFloat(kban)*.12))-parseFloat(pban)).toFixed(2);
+  var fpban=(parseFloat(kban)*.01)
+  document.getElementById('mbanre').innerHTML=fban;
+  document.getElementById('mbancom').innerHTML=fpban;
+
+  var ften=((parseFloat(kusr)-(parseFloat(kusr)*.12))-parseFloat(pusr)).toFixed(2);
+  var fften=(parseFloat(ften)-(parseFloat(ften*.10))).toFixed(2);
+  document.getElementById('m10re').innerHTML=fften;
+  document.getElementById('m10com').innerHTML=(((parseFloat(kusr)*.01))-(parseFloat(kusr)*.01)*.10).toFixed(2);
+
+  var fkk=((parseFloat(kk)-(parseFloat(kk)*.12))-parseFloat(pk)).toFixed(2);
+  var fkr=(parseFloat(fkk)-(parseFloat(fkk*.20))).toFixed(2);
+  document.getElementById('mkre').innerHTML=fkr;
+  document.getElementById('mkcom').innerHTML=(((parseFloat(kk)*.02))-(parseFloat(kk)*.02)*.20).toFixed(2);
+
+  var fvv=((parseFloat(kv)-(parseFloat(kv)*.12))-parseFloat(pv)).toFixed(2);
+  var fvr=(parseFloat(fvv)-(parseFloat(fvv*.20))).toFixed(2);
+  document.getElementById('mvre').innerHTML=fvr;
+  // commision
+  document.getElementById('mvcom').innerHTML=(((parseFloat(kv)*.02))-(parseFloat(kv)*.02)*.20).toFixed(2);
+
+  var fzz=((parseFloat(kz)-(parseFloat(kz)*.12))-parseFloat(pz)).toFixed(2);
+  var fzr=(parseFloat(fzz)-(parseFloat(fzz*.20))).toFixed(2);
+  document.getElementById('mzre').innerHTML=fzr;
+  document.getElementById('mzcom').innerHTML=(((parseFloat(kz)*.02))-(parseFloat(kz)*.02)*.20).toFixed(2);
+
+  var fss=((parseFloat(ks)-(parseFloat(ks)*.12))-parseFloat(ps)).toFixed(2);
+  var fsr=(parseFloat(fss)-(parseFloat(fss*.30))).toFixed(2);
+  document.getElementById('msre').innerHTML=fsr;
+  document.getElementById('mscom').innerHTML=(((parseFloat(ks)*.02))-(parseFloat(ks)*.02)*.30).toFixed(2);
+// totalsum
+var table = document.getElementById("table3"), sumVal = 0,comm =0;
+            
+            for(var i = 1; i < table.rows.length-1; i++)
+            {
+              console.log(table.rows.length);
+              console.log(i);
+                sumVal = sumVal + parseFloat(table.rows[i].cells[1].innerHTML);
+                comm = comm + parseFloat(table.rows[i].cells[2].innerHTML);
+            }
+
+  document.getElementById('manishkaam').innerHTML=sumVal.toFixed(2);
+  document.getElementById('manishcomm').innerHTML=comm.toFixed(2);
+  console.log(sumVal);
+  console.log(fften);
+}
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
