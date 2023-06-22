@@ -35,9 +35,19 @@
         <td><input type="text" class="form-control" id="phim" value="0"></td>
       </tr>
       <tr>
+        <td>Patner</td>
+        <td><input type="text" class="form-control" id="kpat" value="0"></td>
+        <td><input type="text" class="form-control" id="ppat" value="0"></td>
+      </tr>
+      <tr>
         <td>Banty</td>
         <td><input type="text" class="form-control" id="kban" value="0"></td>
         <td><input type="text" class="form-control" id="pban" value="0"></td>
+      </tr>
+      <tr>
+        <td>Tulsi</td>
+        <td><input type="text" class="form-control" id="ktul" value="0"></td>
+        <td><input type="text" class="form-control" id="ptul" value="0"></td>
       </tr>
       <tr>
         <td>10%</td>
@@ -79,6 +89,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>Tulsi</td>
+        <td id="tulre"></td>
+        <td id="tulcom"></td>        
+      </tr>
       <tr>
         <td>10%</td>
         <td id="10re"></td>
@@ -135,6 +150,11 @@
         <td id="hicom"></td>      
       </tr>
       <tr>
+        <td>Patner</td>
+        <td id="patre"></td>  
+        <td id="patcom"></td>      
+      </tr>
+      <tr>
         <td>Banty</td>
         <td id="banre"></td>  
         <td id="bancom"></td>      
@@ -168,9 +188,19 @@
         <td id="mhicom"></td>      
       </tr>
       <tr>
+        <td>Patner</td>
+        <td id="mpatre"></td>  
+        <td id="mpatcom"></td>      
+      </tr>
+      <tr>
         <td>Banty</td>
         <td id="mbanre"></td>  
         <td id="mbancom"></td>      
+      </tr>
+      <tr>
+        <td>Tulsi</td>
+        <td id="mtulre"></td>  
+        <td id="mtulcom"></td>      
       </tr>
       <tr>
         <td>10%</td>
@@ -207,6 +237,10 @@
 <script type="text/javascript">
   function start(){
     document.getElementById('resultbox').style.display='block';
+    var ktul=document.getElementById('kpat').value;
+  var ptul=document.getElementById('ppat').value;
+  var kpat=document.getElementById('ktul').value;
+  var ppat=document.getElementById('ptul').value;
   var kusr=document.getElementById('kusr').value;
   var pusr=document.getElementById('pusr').value;
   var kk=document.getElementById('kk').value;
@@ -217,6 +251,13 @@
   var pz=document.getElementById('pz').value;
   var ks=document.getElementById('ks').value;
   var ps=document.getElementById('ps').value;
+
+  var ktul=document.getElementById('ktul').value;
+  var ptul=document.getElementById('ptul').value;
+  var ftul=((parseFloat(ktul)-(parseFloat(ktul)*.10))-parseFloat(ptul)).toFixed(2);
+  var fftul=(parseFloat(ftul)-(parseFloat(ftul*.10))).toFixed(2);
+  document.getElementById('tulre').innerHTML=fftul;
+  document.getElementById('tulcom').innerHTML=(((parseFloat(ktul)*.02))-(parseFloat(ktul)*.02)*.10).toFixed(2);;
 
   var ften=((parseFloat(kusr)-(parseFloat(kusr)*.11))-parseFloat(pusr)).toFixed(2);
   var fften=(parseFloat(ften)-(parseFloat(ften*.10))).toFixed(2);
@@ -274,6 +315,13 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   document.getElementById('hire').innerHTML=ffhim;
   document.getElementById('hicom').innerHTML=(((parseFloat(khim)*.02)-(parseFloat(khim)*.02)*.3)).toFixed(2);
 
+  var kpat=document.getElementById('kpat').value;
+  var ppat=document.getElementById('ppat').value;
+  var fpat=((parseFloat(kpat)-(parseFloat(kpat)*.10)-parseFloat(ppat))).toFixed(2);
+  var ffpat=(fpat)-(parseFloat(fpat*.30)).toFixed(2);
+  document.getElementById('patre').innerHTML=ffpat;
+  document.getElementById('patcom').innerHTML=(((parseFloat(kpat)*.02)-(parseFloat(kpat)*.02)*.3)).toFixed(2);
+
   var kban=document.getElementById('kban').value;
   var pban=document.getElementById('pban').value;
   var fban=((parseFloat(kban)-(parseFloat(kban)*.11))-parseFloat(pban)).toFixed(2);
@@ -308,6 +356,20 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   var ffhim=(fhim)-(parseFloat(fhim*.30)).toFixed(2);
   document.getElementById('mhire').innerHTML=ffhim;
   document.getElementById('mhicom').innerHTML=(((parseFloat(khim)*.02)-(parseFloat(khim)*.02)*.3)).toFixed(2);
+
+  var kpat=document.getElementById('kpat').value;
+  var ppat=document.getElementById('ppat').value;
+  var fpat=((parseFloat(kpat)-(parseFloat(kpat)*.12))-parseFloat(ppat)).toFixed(2);
+  var ffpat=(fpat)-(parseFloat(fpat*.30)).toFixed(2);
+  document.getElementById('mpatre').innerHTML=ffpat;
+  document.getElementById('mpatcom').innerHTML=(((parseFloat(kpat)*.02)-(parseFloat(kpat)*.02)*.3)).toFixed(2);
+
+  var ktul=document.getElementById('ktul').value;
+  var ptul=document.getElementById('ptul').value;
+  var ftul=((parseFloat(ktul)-(parseFloat(ktul)*.12))-parseFloat(ptul)).toFixed(2);
+  var fftul=(ftul)-(parseFloat(ftul*.10)).toFixed(2);
+  document.getElementById('mtulre').innerHTML=fftul;
+  document.getElementById('mtulcom').innerHTML=(((parseFloat(ktul)*.02)-(parseFloat(ktul)*.02)*.1)).toFixed(2);
 
   var kban=document.getElementById('kban').value;
   var pban=document.getElementById('pban').value;
