@@ -70,6 +70,11 @@
         <td><input type="text" class="form-control" id="pz" value="0"></td>
       </tr>
       <tr>
+        <td>Mama 20%</td>
+        <td><input type="text" class="form-control" id="kma" value="0"></td>
+        <td><input type="text" class="form-control" id="pma" value="0"></td>
+      </tr>
+      <tr>
         <td>Sk 30%</td>
         <td><input type="text" class="form-control" id="ks" value="0"></td>
         <td><input type="text" class="form-control" id="ps" value="0"></td>
@@ -113,6 +118,11 @@
         <td>Zuber</td>
         <td id="zre"></td>  
         <td id="zcom"></td>      
+      </tr>
+      <tr>
+        <td>Mama</td>
+        <td id="mare"></td>  
+        <td id="macom"></td>      
       </tr>
       <tr>
         <td>SK</td>
@@ -223,6 +233,11 @@
         <td id="mzcom"></td>      
       </tr>
       <tr>
+        <td>Mama</td>
+        <td id="mmare"></td>  
+        <td id="mmacom"></td>      
+      </tr>
+      <tr>
         <td>SK</td>
         <td id="msre"></td>  
         <td id="mscom"></td>      
@@ -249,6 +264,8 @@
   var pv=document.getElementById('pv').value;
   var kz=document.getElementById('kz').value;
   var pz=document.getElementById('pz').value;
+   var kma=document.getElementById('kma').value;
+  var pma=document.getElementById('pma').value;
   var ks=document.getElementById('ks').value;
   var ps=document.getElementById('ps').value;
 
@@ -279,6 +296,11 @@
   var fzr=(parseFloat(fzz)-(parseFloat(fzz*.20))).toFixed(2);
   document.getElementById('zre').innerHTML=fzr;
   document.getElementById('zcom').innerHTML=(((parseFloat(kz)*.01))-(parseFloat(kz)*.01)*.20).toFixed(2);
+
+  var fma=((parseFloat(kma)-(parseFloat(kma)*.11))-parseFloat(pma)).toFixed(2);
+  var fmar=(parseFloat(fma)-(parseFloat(fma*.20))).toFixed(2);
+  document.getElementById('mare').innerHTML=fmar;
+  document.getElementById('macom').innerHTML=(((parseFloat(kma)*.01))-(parseFloat(kma)*.01)*.20).toFixed(2);
 
   var fss=((parseFloat(ks)-(parseFloat(ks)*.11))-parseFloat(ps)).toFixed(2);
   var fsr=(parseFloat(fss)-(parseFloat(fss*.30))).toFixed(2);
@@ -311,9 +333,9 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   var khim=document.getElementById('khim').value;
   var phim=document.getElementById('phim').value;
   var fhim=((parseFloat(khim)-(parseFloat(khim)*.10)-parseFloat(phim))).toFixed(2);
-  var ffhim=(fhim)-(parseFloat(fhim*.30)).toFixed(2);
-  document.getElementById('hire').innerHTML=ffhim;
-  document.getElementById('hicom').innerHTML=(((parseFloat(khim)*.02)-(parseFloat(khim)*.02)*.3)).toFixed(2);
+  var ffhim=(fhim);
+  document.getElementById('hire').innerHTML=fhim;
+  document.getElementById('hicom').innerHTML=(((parseFloat(khim)*.02))).toFixed(2);
 
   var kpat=document.getElementById('kpat').value;
   var ppat=document.getElementById('ppat').value;
@@ -353,9 +375,9 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   var khim=document.getElementById('khim').value;
   var phim=document.getElementById('phim').value;
   var fhim=((parseFloat(khim)-(parseFloat(khim)*.12))-parseFloat(phim)).toFixed(2);
-  var ffhim=(fhim)-(parseFloat(fhim*.30)).toFixed(2);
-  document.getElementById('mhire').innerHTML=ffhim;
-  document.getElementById('mhicom').innerHTML=(((parseFloat(khim)*.02)-(parseFloat(khim)*.02)*.3)).toFixed(2);
+  var ffhim=(fhim);
+  document.getElementById('mhire').innerHTML=fhim;
+  document.getElementById('mhicom').innerHTML=(((parseFloat(khim)*.02))).toFixed(2);
 
   var kpat=document.getElementById('kpat').value;
   var ppat=document.getElementById('ppat').value;
@@ -398,6 +420,11 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   var fzr=(parseFloat(fzz)-(parseFloat(fzz*.20))).toFixed(2);
   document.getElementById('mzre').innerHTML=fzr;
   document.getElementById('mzcom').innerHTML=(((parseFloat(kz)*.02))-(parseFloat(kz)*.02)*.20).toFixed(2);
+
+  var fma=((parseFloat(kma)-(parseFloat(kma)*.12))-parseFloat(pma)).toFixed(2);
+  var fmar=(parseFloat(fma)-(parseFloat(fma*.20))).toFixed(2);
+  document.getElementById('mmare').innerHTML=fmar;
+  document.getElementById('mmacom').innerHTML=(((parseFloat(kma)*.02))-(parseFloat(kma)*.02)*.20).toFixed(2);
 
   var fss=((parseFloat(ks)-(parseFloat(ks)*.12))-parseFloat(ps)).toFixed(2);
   var fsr=(parseFloat(fss)-(parseFloat(fss*.30))).toFixed(2);
