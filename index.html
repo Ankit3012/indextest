@@ -346,8 +346,8 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
 
   var kban=document.getElementById('kban').value;
   var pban=document.getElementById('pban').value;
-  var fban=((parseFloat(kban)-(parseFloat(kban)*.11))-parseFloat(pban)).toFixed(2);
-  var fpban=(parseFloat(kban)*.02)
+  var fban=((parseFloat(kban)-(parseFloat(kban)*.10))-parseFloat(pban)).toFixed(2);
+  var fpban=(parseFloat(kban)*.01)
   document.getElementById('banre').innerHTML=fban;
   document.getElementById('bancom').innerHTML=fpban;
 
