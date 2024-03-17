@@ -9,13 +9,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Oom</title>
+    <style type="text/css">
+      table {
+         
+            height: -5px;
+            width: 100%;
+            table-layout:fixed;
+        }
+  
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: -10px;
+        }
+  
+        tr:nth-child(even) {
+/*            height: 10px;*/
+        }
+      
+    </style>
   </head>
   <body>
     <h1>Calculator</h1>
     <div class="container">
   <h4>Basic Table</h4>
              
-  <table class="table">
+  <table class="table" id="table12">
     <thead>
       <tr>
         <th>Name</th>
@@ -45,7 +64,7 @@
         <td><input type="text" class="form-control" id="pban" value="0"></td>
       </tr>
       <tr>
-        <td>Tulsi</td>
+        <td>Rahul</td>
         <td><input type="text" class="form-control" id="ktul" value="0"></td>
         <td><input type="text" class="form-control" id="ptul" value="0"></td>
       </tr>
@@ -70,12 +89,12 @@
         <td><input type="text" class="form-control" id="pz" value="0"></td>
       </tr>
       <tr>
-        <td>Mama 20%</td>
+        <td>Sushil 20%</td>
         <td><input type="text" class="form-control" id="kma" value="0"></td>
         <td><input type="text" class="form-control" id="pma" value="0"></td>
       </tr>
       <tr>
-        <td>Sk 30%</td>
+        <td>Sk 20%</td>
         <td><input type="text" class="form-control" id="ks" value="0"></td>
         <td><input type="text" class="form-control" id="ps" value="0"></td>
       </tr>
@@ -95,7 +114,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>Tulsi</td>
+        <td>Rahul</td>
         <td id="tulre"></td>
         <td id="tulcom"></td>        
       </tr>
@@ -120,7 +139,7 @@
         <td id="zcom"></td>      
       </tr>
       <tr>
-        <td>Mama</td>
+        <td>Sushil</td>
         <td id="mare"></td>  
         <td id="macom"></td>      
       </tr>
@@ -208,7 +227,7 @@
         <td id="mbancom"></td>      
       </tr>
       <tr>
-        <td>Tulsi</td>
+        <td>Rahul</td>
         <td id="mtulre"></td>  
         <td id="mtulcom"></td>      
       </tr>
@@ -233,7 +252,7 @@
         <td id="mzcom"></td>      
       </tr>
       <tr>
-        <td>Mama</td>
+        <td>Sushil</td>
         <td id="mmare"></td>  
         <td id="mmacom"></td>      
       </tr>
@@ -271,7 +290,7 @@
 
   var ktul=document.getElementById('ktul').value;
   var ptul=document.getElementById('ptul').value;
-  var ftul=((parseFloat(ktul)-(parseFloat(ktul)*.10))-parseFloat(ptul)).toFixed(2);
+  var ftul=((parseFloat(ktul)-(parseFloat(ktul)*.11))-parseFloat(ptul)).toFixed(2);
   var fftul=(parseFloat(ftul)-(parseFloat(ftul*.10))).toFixed(2);
   document.getElementById('tulre').innerHTML=fftul;
   document.getElementById('tulcom').innerHTML=(((parseFloat(ktul)*.02))-(parseFloat(ktul)*.02)*.10).toFixed(2);;
@@ -303,7 +322,7 @@
   document.getElementById('macom').innerHTML=(((parseFloat(kma)*.01))-(parseFloat(kma)*.01)*.20).toFixed(2);
 
   var fss=((parseFloat(ks)-(parseFloat(ks)*.11))-parseFloat(ps)).toFixed(2);
-  var fsr=(parseFloat(fss)-(parseFloat(fss*.30))).toFixed(2);
+  var fsr=(parseFloat(fss)-(parseFloat(fss*.20))).toFixed(2);
   document.getElementById('sre').innerHTML=fsr;
   document.getElementById('scom').innerHTML=(((parseFloat(ks)*.01))-(parseFloat(ks)*.01)*.30).toFixed(2);
 // totalsum
@@ -340,14 +359,14 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   var kpat=document.getElementById('kpat').value;
   var ppat=document.getElementById('ppat').value;
   var fpat=((parseFloat(kpat)-(parseFloat(kpat)*.10)-parseFloat(ppat))).toFixed(2);
-  var ffpat=(fpat)-(parseFloat(fpat*.30)).toFixed(2);
+  var ffpat=(fpat)-(parseFloat(fpat*.50)).toFixed(2);
   document.getElementById('patre').innerHTML=ffpat;
-  document.getElementById('patcom').innerHTML=(((parseFloat(kpat)*.02)-(parseFloat(kpat)*.02)*.3)).toFixed(2);
+  document.getElementById('patcom').innerHTML=(((parseFloat(kpat)*.02)-(parseFloat(kpat)*.02)*.5)).toFixed(2);
 
   var kban=document.getElementById('kban').value;
   var pban=document.getElementById('pban').value;
-  var fban=((parseFloat(kban)-(parseFloat(kban)*.10))-parseFloat(pban)).toFixed(2);
-  var fpban=(parseFloat(kban)*.01)
+  var fban=((parseFloat(kban)-(parseFloat(kban)*.11))-parseFloat(pban)).toFixed(2);
+  var fpban=(parseFloat(kban)*.02)
   document.getElementById('banre').innerHTML=fban;
   document.getElementById('bancom').innerHTML=fpban;
 
@@ -382,7 +401,7 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   var kpat=document.getElementById('kpat').value;
   var ppat=document.getElementById('ppat').value;
   var fpat=((parseFloat(kpat)-(parseFloat(kpat)*.12))-parseFloat(ppat)).toFixed(2);
-  var ffpat=(fpat)-(parseFloat(fpat*.30)).toFixed(2);
+  var ffpat=(fpat)-(parseFloat(fpat*.50)).toFixed(2);
   document.getElementById('mpatre').innerHTML=ffpat;
   document.getElementById('mpatcom').innerHTML=(((parseFloat(kpat)*.02)-(parseFloat(kpat)*.02)*.3)).toFixed(2);
 
@@ -427,7 +446,7 @@ var table = document.getElementById("table1"), sumVal = 0,comm =0;
   document.getElementById('mmacom').innerHTML=(((parseFloat(kma)*.02))-(parseFloat(kma)*.02)*.20).toFixed(2);
 
   var fss=((parseFloat(ks)-(parseFloat(ks)*.12))-parseFloat(ps)).toFixed(2);
-  var fsr=(parseFloat(fss)-(parseFloat(fss*.30))).toFixed(2);
+  var fsr=(parseFloat(fss)-(parseFloat(fss*.20))).toFixed(2);
   document.getElementById('msre').innerHTML=fsr;
   document.getElementById('mscom').innerHTML=(((parseFloat(ks)*.02))-(parseFloat(ks)*.02)*.30).toFixed(2);
 // totalsum
